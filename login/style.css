@@ -1,0 +1,69 @@
+body{
+
+    background-image: url('/buoi 5/img/453836 (1).jpg');
+    background-size: cover;
+} 
+
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.form-heading{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group{
+    border-bottom: 1px solid white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    flex-grow: 1;
+}
+.form-input::placeholder{
+   color: aliceblue;
+
+}
+.form-input:hover{
+    color: liner;
+    background: rgb(84,84,84);
+background: linear-gradient(94deg, rgba(84,84,84,1) 0%, rgba(51,51,51,1) 100%);
+}
+.form-submit{
+    background: transparent;
+    color: white;
+    width: 100%;
+    padding: 6px 10px;
+    margin-top: 30px;
+    transition: ease 1s ;
+    background: linear-gradient(94deg, rgba(84,84,84,1) 0%, rgba(51,51,51,1) 100%)d;
+  transition: width 2s, transform 2s;
+}
+
+@keyframes example {
+    from {background-color: transparent;}
+    to {background-color: linear-gradient(94deg, rgba(84,84,84,1) 0%, rgba(51,51,51,1) 100%);}
+  }
+
+.form-submit:hover{
+    /* background: rgb(84,84,84); */
+    animation-name: example;
+    animation-duration:1s;
+    background-color: linear-gradient(94deg, rgba(84,84,84,1) 0%, rgba(51,51,51,1) 100%);
+      transform:100px ;
+}
