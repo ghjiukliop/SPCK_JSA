@@ -3,31 +3,40 @@
 
 <head>
         <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/login/style.css">
 </head>
 
 <body>
     
-    
     <div id="wrapper">
-   
-        <form id="login-form">
-            <h1 class="form-headding" style="color: aliceblue;"> LOGIN</h1>
-            <div class="form-group">
-                <label for="email" style="color: antiquewhite;">Email:</label><br>
-                <input type="email" id="email" class="form-input" name="email" required><br>
+        <div id="cover">
+          <form id="login-form">
+            <div class="sign_up">
+              <label class="label" style="padding-bottom: 100px;">SIGN IN</label>
+            </div>
+            <div class="label">
+              <label for="email" style="padding-bottom: 10px;">Email:</label><br>
             </div>
             <div class="form_group">
-                <label for="password" style="color: antiquewhite;">Password:</label><br>
-                <input type="password" id="password" class="form-input" style="border-bottom:1px solid white ;"
-                    name="password" required><br>
+              <input type="email" id="emailInput" style="color: antiquewhite;" class="form_input" name="email" required><br>
             </div>
-            <input type="submit" value="Submit" class="form-submit">
-            <p style="color: antiquewhite;"> <a href="" class="form-submit" 
-                    style="text-decoration: none; text-decoration: underline;">dont have an account ?</a></p>
-        </form>
-    </div>
-    <script src="/Hưng fixed/index.html"></script>
+            <div class="label">
+              <label for="password">Password:</label><br>
+            </div>
+            <div class="form_group">
+              <input type="password" id="passwordInput" style="color: antiquewhite;" class="form_input" name="password" required><br>
+            </div>
+            <div id="submit-cover " style="   border-radius: 30px;">
+              <input type="submit" value="Submit"  step="" id="submit">
+            </div>
+            
+            <button id="deleteLocalStorageButton" style="border-radius: 30px;">Delete Local Storage</button>
+
+          </form>
+        </div>
+      </div>
+   
+    <script src="/login/main.js"></script>
 </body>
  
-</html>
+</html>x

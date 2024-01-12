@@ -1,26 +1,26 @@
-$(document).ready(function(){
-    var users = JSON.parse(localStorage.getItem('users')) || [];
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById('login-form');
 
-    $('#login-form').on('submit', function(e){
-        e.preventDefault();
-        var email = $('#email').val();
-        var password = $('#password').val();
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        // Check if email is valid. You can add more complex email validation here.
-        if (email.includes('@')) {
-            // Find the user in the users array.
-            var user = users.find(function(user){
-                return user.email === email && user.password === password;
-            });
+        const email = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
 
-            // If a user is found, redirect to other page.
-            if (user == user) {
-                window.location.href ="/Hưng fixed/index.html";
-            } else {
-                alert('Incorrect email or password.');
-            }
+        const savedEmail = localStorage.getItem('signupEmail');
+        const savedPassword = localStorage.getItem('signupPassword');
+
+        if (email === savedEmail && password === savedPassword) {
+            alert('Login successful! Redirecting...');
+            window.location.href = '/Hưng fixed/index.html'; // Thay đổi thành URL của trang cần chuyển hướng
         } else {
-            alert('Please enter a valid email address.');
+            alert('Login failed. Please check your credentials.');
         }
     });
+});
+
+document.getElementById("deleteLocalStorageButton").addEventListener("click", function() {
+    localStorage.clear();
+    window.location.href = "/signUp/index.html"; // Replace this with your desired redirection URL
+
 });
